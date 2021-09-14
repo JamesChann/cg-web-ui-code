@@ -8,6 +8,8 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import ColorPicker from './../packages/index'
 
+import mapState from './map-data.js'
+
 Vue.directive('hljs', el => {
   let blocks = el.querySelectorAll('pre')
   Array.prototype.forEach.call(blocks, hljs.highlightBlock)
@@ -15,6 +17,8 @@ Vue.directive('hljs', el => {
 
 Vue.use(ElementUI)
 Vue.use(ColorPicker)
+
+Vue.prototype.$mapState = mapState
 
 Vue.config.productionTip = false
 

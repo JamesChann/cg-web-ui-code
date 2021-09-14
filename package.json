@@ -3,14 +3,14 @@
   "version": "1.0.1",
   "description": "基于 element 的UI组件库",
   "main": "lib/vcolorpicker.umd.min.js",
-  "keyword": "vcolorpicker colorpicker color-picker",
-  "homepage": "https://github.com/zuley/vue-color-picker",
+  "keyword": "cg-web-ui CG-UI cg-ui",
+  "homepage": "https://github.com/jameschan/cg-web-ui",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name vcolorpicker --dest lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name cg-web-ui --dest lib packages/index.js"
   },
   "dependencies": {
     "highlight.js": "^9.12.0",

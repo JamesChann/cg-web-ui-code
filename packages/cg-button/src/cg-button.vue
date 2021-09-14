@@ -1,10 +1,11 @@
 <template>
   <section class="cg-button">
     <el-button :class="[type ? 'cg-button--' + type : '']"
-               @click="handleClick">
+               @click="handleClick"
+               :type="useElementType ? useElementType : ''">
       <span class="cg-button__icon"
             v-if="icon">
-        <svg-icon :icon-class="icon" />
+        <!-- <svg-icon :icon-class="icon" /> -->
       </span>
       <slot></slot>
     </el-button>
@@ -20,6 +21,10 @@ export default {
       default: 'default'
     },
     icon: {
+      type: String,
+      default: ''
+    },
+    useElementType: {
       type: String,
       default: ''
     }

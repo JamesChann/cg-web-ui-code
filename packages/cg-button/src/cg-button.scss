@@ -1,13 +1,13 @@
 .cg-button {
   display: inline-block;
 
-  &--search {
-    color: #fff;
-    background-color: #5e83f8;
-    border-color: #5e83f8;
-    padding: 8px 15px;
-    font-size: 12px;
-    border-radius: 3px;
+  &--query {
+    color: #606266;
+    background-color: #fff;
+    border-color: #dcdfe6;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
     &:focus,
     &:hover {
       background: #82a0ff;
