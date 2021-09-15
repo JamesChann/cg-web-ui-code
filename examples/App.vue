@@ -11,10 +11,10 @@
       
       <h1>组件示例</h1>
 
-      <h5>输入框</h5>
+      <h3 style="margin-bottom:10px;">输入框</h3>
       <cg-input></cg-input>
 
-      <h5>表格</h5>
+      <h3 style="margin-top:50px;margin-bottom:10px;">表格</h3>
       <cg-table :dataList="MTable.list"
                 :tableConfig.sync="MTable.config"
                 :getListHandle="getDataList">
@@ -54,9 +54,10 @@ export default {
           headers: [
             { title: '会员ID', field: 'id' },
             { title: '会员姓名', field: 'cardName' },
+            { title: '会员地址', field: 'address' },
             { title: '会员类型', field: 'cardType', pipe: 'cardType' },
-            { title: '会员等级', field: 'cardChannel', pipe: 'cardChannel' },
-            { title: '操作', tdTemplate: 'operationTpl' }
+            // { title: '会员等级', field: 'cardChannel', pipe: 'cardChannel' },
+            // { title: '操作', tdTemplate: 'operationTpl' }
           ]
         },
         list: []
@@ -69,7 +70,13 @@ export default {
   methods: {
     getDataList() {
       setTimeout(() => {
-        this.MTable.list = [{ id: '1', cardName: '测试名称', cardType: 1, cardChannel: 2 }]
+        this.MTable.list = [
+          { id: '1', cardName: '张三', cardType: 1, cardChannel: 1, address: '南京市雨花台世贸城品' },
+          { id: '2', cardName: '李四', cardType: 2, cardChannel: 1, address: '南京市雨花台世贸城品' },
+          { id: '3', cardName: '王舞', cardType: 1, cardChannel: 1, address: '南京市雨花台世贸城品' },
+          { id: '4', cardName: '王陆', cardType: 2, cardChannel: 1, address: '南京市雨花台世贸城品' },
+          { id: '5', cardName: '田七', cardType: 1, cardChannel: 1, address: '南京市雨花台世贸城品' }
+        ]
       }, 500)
     }
   }
